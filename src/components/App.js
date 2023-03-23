@@ -1,4 +1,4 @@
-import React from "react";
+
 import {useEffect, useState} from 'react';
 import '../index.css';
 import Header from './Header';
@@ -58,6 +58,9 @@ function App() {
       .then((data) => {
         setCurrentUser(data);
         closeAllPopups();
+      })
+      .catch((err) => {
+        console.log(err)
       })
   }
 
